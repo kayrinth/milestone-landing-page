@@ -9,8 +9,8 @@ export default function Navbar() {
 
   const menus = [
     { label: "Home", href: "#home" },
+    { label: "About", href: "#about" },
     { label: "Features", href: "#features" },
-    { label: "Pricing", href: "#pricing" },
     { label: "Contact", href: "#contact" },
   ];
 

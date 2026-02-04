@@ -25,3 +25,18 @@ export const getProducts = async ({ page, limit }) => {
 
   return res.data;
 };
+
+export const getTestimonials = async ({ page, limit }) => {
+  const res = await axios.get("/testimonials", {
+    params: {
+      page,
+      limit,
+    },
+  });
+  return res.data;
+};
+
+export const postCtaSubscription = async (email) => {
+  const res = await axios.post("/subscribe", { email });
+  return res.data;
+};

@@ -1,7 +1,7 @@
 import { ProductItems } from "../molecules/productItem";
 export function Products() {
   return (
-    <section className="my-20 max-w-7xl mx-auto">
+    <section className="my-20 max-w-7xl mx-auto text-[#23262F]">
       <div className="mb-10 text-center space-y-3">
         <h2 className="font-semibold text-4xl">All Product</h2>
         <p className="mx-48">

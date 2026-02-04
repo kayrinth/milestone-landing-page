@@ -5,6 +5,8 @@ import { Features } from "@/components/organism/features";
 import { Categories } from "@/components/organism/categories";
 import { CompanyOverview } from "@/components/organism/companyOverview";
 import { Products } from "@/components/organism/product";
+import { Testimonials } from "@/components/organism/testimonials";
+import { Cta } from "@/components/organism/cta";
 export default function LandingPage() {
   return (
     <>
@@ -15,6 +17,8 @@ export default function LandingPage() {
       <Categories />
       <CompanyOverview />
       <Products />
+      <Testimonials />
+      <Cta />
     </>
   );
 }

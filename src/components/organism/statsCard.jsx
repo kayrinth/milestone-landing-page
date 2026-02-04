@@ -18,7 +18,7 @@ export function StatsCard() {
   }, []);
   return (
     <div className="relative z-10 -mt-12 mx-auto  max-w-7xl">
-      <div className="flex grid-cols-1 md:grid-cols-7 rounded-2xl bg-teal-700 text-white shadow-xl justify-around items-center md:flex-row flex-col py-6">
+      <div className="flex grid-cols-1 md:grid-cols-7 rounded-2xl bg-[#286F6C] text-white shadow-xl justify-around items-center md:flex-row flex-col py-6">
         <StatItem value={data?.experience} label="Year Experience" />
         <div className="border-l border-white h-28"></div>
         <StatItem value={data?.country} label="Opened in the country" />

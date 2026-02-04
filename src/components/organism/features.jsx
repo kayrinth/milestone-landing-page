@@ -12,7 +12,7 @@ export function Features() {
             className="w-full h-full object-cover object-center rounded-xl "
           />
         </div>
-        <div className="text-start">
+        <div className="text-start text-[#23262F] w-full md:w-1/2">
           <h2 className="text-4xl font-semibold mb-5">
             We Create your home
             <br /> more aesthetic
