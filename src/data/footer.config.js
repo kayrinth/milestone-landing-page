@@ -6,7 +6,6 @@ export const footerSocials = [
   { icon: Facebook, href: "#" },
   { icon: Twitter, href: "#" },
   { icon: Github, href: "#" },
-  { icon: Instagram, href: "#" },
 ];
 
 export const footerLinks = [

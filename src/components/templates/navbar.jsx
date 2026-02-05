@@ -3,6 +3,7 @@ import { Menu } from "lucide-react";
 import { Button } from "@/components/atoms/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/atoms/sheet";
 import { LayoutDashboard, ContactRound, Info, Sparkles } from "lucide-react";
+import cta from "../../assets/cta.webp";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -50,21 +51,49 @@ export default function Navbar() {
             </Button>
           </SheetTrigger>
 
-          <SheetContent side="right" className="w-64 bg-white">
-            <nav className="flex flex-col gap-4 mt-8 ml-3">
-              {menus.map((menu) => (
-                <div key={menu.label} className="flex items-center">
-                  <menu.icon className="mr-2" />
-                  <a
-                    href={menu.href}
-                    onClick={() => setOpen(false)}
-                    className="text-sm font-medium"
-                  >
-                    {menu.label}
-                  </a>
-                </div>
-              ))}
+          <SheetContent side="right" className="w-72 bg-white p-0">
+            <nav className="flex flex-col gap-4 ">
+              <div className="relative h-52 w-full mb-4">
+                <img
+                  src={cta}
+                  alt="image furniShop"
+                  className="object-cover w-full h-full"
+                />
+                <div className="absolute inset-0 overflow-hidden bg-black opacity-40"></div>
+                <h2 className="text-3xl font-bold text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  FurniShop
+                </h2>
+                <p className="text-white text-sm mt-1 absolute bottom-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  Furniture Store
+                </p>
+              </div>
+              <div className="flex flex-col">
+                {menus.map((menu) => (
+                  <div className="px-4">
+                    <div key={menu.label} className="flex items-center mb-4 ">
+                      <a
+                        href={menu.href}
+                        onClick={() => setOpen(false)}
+                        className="flex items-center gap-4 px-4 py-4 text-gray-700  hover:text-teal-800 transition-colors group"
+                      >
+                        <menu.icon
+                          className="text-teal-600 group-hover:text-teal-800 transition-colors"
+                          size={20}
+                        />
+                        <span className="text-sm font-medium">
+                          {menu.label}
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </nav>
+            <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-gray-200">
+              <p className="text-xs text-gray-500 text-center">
+                © NameBrand 2022 – All Rights Reserved
+              </p>
+            </div>
           </SheetContent>
         </Sheet>
       </div>
