@@ -2,7 +2,7 @@ import cta from "../../assets/cta.webp";
 import { SubscribeForm } from "@/components/molecules/subscribeForm";
 export function Cta() {
   return (
-    <section className="w-full">
+    <section className="w-full" id="contact">
       <div className="relative w-full md:aspect-16/5 h-86 md:h-auto">
         <img
           src={cta}

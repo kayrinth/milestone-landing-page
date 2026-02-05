@@ -24,7 +24,7 @@ export function Hero() {
   }
 
   return (
-    <section className="relative h-screen overflow-hidden">
+    <section className="relative h-screen overflow-hidden" id="home">
       <div>
         <div className="bg-black h-full w-full absolute top-0 left-0 opacity-20"></div>
         <img

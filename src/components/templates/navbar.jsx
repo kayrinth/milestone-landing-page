@@ -1,12 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu } from "lucide-react";
-
 import { Button } from "@/components/atoms/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/atoms/sheet";
 import { LayoutDashboard, ContactRound, Info, Sparkles } from "lucide-react";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const menus = [
     { label: "Home", href: "#home", icon: LayoutDashboard },
@@ -15,8 +15,19 @@ export default function Navbar() {
     { label: "Contact", href: "#contact", icon: ContactRound },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 z-50 w-full text-white py-4">
+    <header
+      className={`fixed top-0 z-50 w-full text-white py-4 ${scrolled ? "bg-teal-800/40 backdrop-blur-md" : ""}`}
+    >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
         <a href="#home" className="text-4xl font-bold">
           FurniShop
