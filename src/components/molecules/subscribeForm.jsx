@@ -32,20 +32,20 @@ export function SubscribeForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full">
-      <div className="flex gap-3">
+    <form onSubmit={handleSubmit} className="w-full max-w-md">
+      <div className="flex md:flex-row gap-3">
         <input
           type="email"
           placeholder="Your email address"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-72 px-4 py-3 rounded-lg border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-[#26938e]"
+          className="w-52 md:w-72 px-4 py-3  rounded-lg border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-[#26938e]"
         />
 
         <button
           type="submit"
           disabled={loading}
-          className="px-6 py-3 bg-[#23262F] text-white rounded-lg hover:bg-[#1a1b22] disabled:opacity-50"
+          className="w-28 md:w-32 md:px-6 px-3 py-3 bg-[#23262F] text-white rounded-lg hover:bg-[#1a1b22] disabled:opacity-50"
         >
           {loading ? "Loading..." : "Shop Now"}
         </button>

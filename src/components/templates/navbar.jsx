@@ -3,15 +3,16 @@ import { Menu } from "lucide-react";
 
 import { Button } from "@/components/atoms/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/atoms/sheet";
+import { LayoutDashboard, ContactRound, Info, Sparkles } from "lucide-react";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   const menus = [
-    { label: "Home", href: "#home" },
-    { label: "About", href: "#about" },
-    { label: "Features", href: "#features" },
-    { label: "Contact", href: "#contact" },
+    { label: "Home", href: "#home", icon: LayoutDashboard },
+    { label: "About", href: "#about", icon: Info },
+    { label: "Features", href: "#features", icon: Sparkles },
+    { label: "Contact", href: "#contact", icon: ContactRound },
   ];
 
   return (
@@ -38,17 +39,19 @@ export default function Navbar() {
             </Button>
           </SheetTrigger>
 
-          <SheetContent side="right" className="w-64">
+          <SheetContent side="right" className="w-64 bg-white">
             <nav className="flex flex-col gap-4 mt-8 ml-3">
               {menus.map((menu) => (
-                <a
-                  key={menu.label}
-                  href={menu.href}
-                  onClick={() => setOpen(false)}
-                  className="text-sm font-medium"
-                >
-                  {menu.label}
-                </a>
+                <div key={menu.label} className="flex items-center">
+                  <menu.icon className="mr-2" />
+                  <a
+                    href={menu.href}
+                    onClick={() => setOpen(false)}
+                    className="text-sm font-medium"
+                  >
+                    {menu.label}
+                  </a>
+                </div>
               ))}
             </nav>
           </SheetContent>

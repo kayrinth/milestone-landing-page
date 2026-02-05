@@ -33,10 +33,10 @@ export function ProductItems() {
 
   return (
     <>
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="grid gap-8 grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 p-10 md:p-0">
         {products.map((item) => (
           <CardProduct key={item.id} className="pt-0">
-            <div className="relative h-64 bg-muted rounded-2xl p-4 flex items-center justify-center border border-gray-300">
+            <div className="relative h-40 md:h-64 bg-muted rounded-2xl p-4 flex items-center justify-center border border-gray-300">
               <img
                 src={item.image}
                 alt={item.title}
@@ -49,7 +49,7 @@ export function ProductItems() {
 
             <CardHeader className="-ml-4">
               <CardTitle>{item.title}</CardTitle>
-              <div className="flex gap-3 mt-2">
+              <div className="flex gap-3 mt-0 md:mt-2">
                 <CardDescription>$ {item.price}</CardDescription>
                 {item.price_after_discount && (
                   <CardDescription className="line-through text-gray-400">

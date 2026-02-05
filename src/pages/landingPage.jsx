@@ -7,6 +7,7 @@ import { CompanyOverview } from "@/components/organism/companyOverview";
 import { Products } from "@/components/organism/product";
 import { Testimonials } from "@/components/organism/testimonials";
 import { Cta } from "@/components/organism/cta";
+import { Footer } from "@/components/templates/footer";
 export default function LandingPage() {
   return (
     <>
@@ -19,6 +20,7 @@ export default function LandingPage() {
       <Products />
       <Testimonials />
       <Cta />
+      <Footer />
     </>
   );
 }

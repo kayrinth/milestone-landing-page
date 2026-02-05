@@ -8,7 +8,7 @@ export function FeatureItem({ title, desc }) {
 
       <div>
         <h4 className="font-semibold text-lg mb-2">{title}</h4>
-        <p className="text-md ">{desc}</p>
+        <p className="text-md md:text-lg">{desc}</p>
       </div>
     </div>
   );
