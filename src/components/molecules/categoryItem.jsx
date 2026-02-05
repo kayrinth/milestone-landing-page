@@ -37,7 +37,7 @@ export function Category() {
   }
 
   return (
-    <Carousel className="max-w-9xl">
+    <Carousel className="w-full">
       <CarouselContent className="-ml-1">
         {categories.map((item, index) => (
           <CarouselItem key={index} className="basis-1/2 pl-1 lg:basis-1/4">

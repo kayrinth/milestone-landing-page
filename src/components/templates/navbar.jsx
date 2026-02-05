@@ -26,7 +26,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 z-50 w-full text-white py-4 ${scrolled ? "bg-teal-800/40 backdrop-blur-md" : ""}`}
+      className={`fixed top-0 z-50 w-full text-white py-4 ${scrolled ? "bg-teal-800/60 backdrop-blur-md" : ""}`}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
         <a href="#home" className="text-4xl font-bold">
