@@ -30,7 +30,7 @@ export function Hero() {
         <img
           src={hero?.banner}
           alt={hero?.title}
-          className="w-screen h-screen object-cover object-[95%_center]  md:object-cover md:object-[center_80%]"
+          className="w-full h-screen object-cover object-[95%_center]  md:object-cover md:object-[center_80%]"
         />
       </div>
 
